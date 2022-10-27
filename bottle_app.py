@@ -1,19 +1,19 @@
 from bottle import default_app, route, get, post, template, request, redirect
 import sqlite3
 
-connection = sqlite3.connect("footbal_players_list.db")
+connection = sqlite3.connect("football_players_list.db")
 
 @route('/')
 def hello_world():
-    return 'Hello from janardhan'
+    return 'Hello from janardhan!'
 
 @route('/hi')
 def hi_world():
-    return 'Hi from janardhan'
+    return 'Hi from janardhan!'
 
 @route('/bye')
 def bye_world():
-    return 'Bye from janardhan'
+    return 'Bye from janardhan!'
 
 @route('/list')
 def get_list():
@@ -21,7 +21,7 @@ def get_list():
     rows = cursor.execute("select id, description from list")
     rows = list(rows)
     rows = [ {'id':row[0] ,'desc':row[1]} for row in rows ]
-    return template("shopping_list.tpl", name="Dr. DeLozier", shopping_list=rows)
+    return template("football_players_list.tpl", name="janardhan", football_players_list=rows)
 
 @get('/add')
 def get_add():
@@ -62,4 +62,3 @@ def post_edit(id):
 
 
 application = default_app()
-Footer
