@@ -1,6 +1,6 @@
 <html>
 <body>
-<h2>football players List</h2>
+<h2>football_plaayers List</h2>
 <hr/>
 <table>
 % for item in football_players_list:
@@ -12,6 +12,9 @@
 % end
 </table>
 <hr/>
-<a href="/add">Add new item...</a>
+<form action="/add" method="post">
+  <p>Add new item: <input name="description"/></p>
+  <p><button type="submit">Submit</button>
+</form>
 </body>
 </html>
