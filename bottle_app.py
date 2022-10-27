@@ -25,7 +25,7 @@ def get_list():
 
 @get('/add')
 def get_add():
-    return template("add_item.tpl")
+    return template("add_iteam.tpl")
 
 @post('/add')
 def post_add():
