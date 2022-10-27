@@ -1,6 +1,6 @@
 <html>
 <body>
-<h2>Shopping List</h2>
+<h2>football players List</h2>
 <hr/>
 <table>
 % for item in football_players_list:
